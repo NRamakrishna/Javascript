@@ -1,0 +1,53 @@
+<html>
+<head>
+	<title>Jquery apply</title>
+	<style type="text/css">
+	.container{
+		position: absolute;
+		width:100%;
+		height:10%;
+		display:table;
+		margin-left: -8px;
+		margin-top: -8px;
+	}
+	.row1{
+		width:50%;
+		padding-top: 11px;
+		display: table-cell;
+		background-color: #a265bb;
+	}
+	.clicked-red{
+		background-color: #3498db;
+	}
+	.clicked-green{
+		background-color: #a265bb;
+	}
+	.row2{
+		width:50%;
+		display: table-cell;
+		background-color: #3498db;
+	}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row1">
+			<h1>This is First word</h1>
+			<script type="text/javascript">
+			$(".row1").click( function() {
+				$(this).toggleClass('clicked-red');
+			} );
+			</script>
+		</div>
+		<div class="row2">
+			<h1>This is Second word</h1>
+			<script type="text/javascript">
+			$(".row2").click( function() {
+				$(this).toggleClass('clicked-green');
+			} );
+			</script>
+		</div>
+	</div>
+</body>
+</html>
